@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="All Apps">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#10100C"/>
+      <stop offset=".55" stop-color="#232116"/>
+      <stop offset="1" stop-color="#3A3524"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#FBF0DA" stop-opacity=".15"/>
+      <stop offset=".58" stop-color="#FBF0DA" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#FFF4E2" stroke-opacity=".08"/>
+  <g transform="translate(0 7)" fill="#000" opacity=".32">
+    <rect x="180" y="68" width="40" height="40" rx="10"/>
+    <rect x="236" y="68" width="40" height="40" rx="10"/>
+    <rect x="292" y="68" width="40" height="40" rx="10"/>
+    <rect x="180" y="124" width="40" height="40" rx="10"/>
+    <rect x="236" y="124" width="40" height="40" rx="10"/>
+    <rect x="292" y="124" width="40" height="40" rx="10"/>
+    <rect x="180" y="180" width="40" height="40" rx="10"/>
+    <rect x="236" y="180" width="40" height="40" rx="10"/>
+    <rect x="292" y="180" width="40" height="40" rx="10"/>
+  </g>
+  <g>
+    <rect x="180" y="68" width="40" height="40" rx="10" fill="#F6EBD8"/>
+    <rect x="236" y="68" width="40" height="40" rx="10" fill="#D9B978"/>
+    <rect x="292" y="68" width="40" height="40" rx="10" fill="#F6EBD8"/>
+    <rect x="180" y="124" width="40" height="40" rx="10" fill="#D9B978"/>
+    <rect x="236" y="124" width="40" height="40" rx="10" fill="#A3854F"/>
+    <rect x="292" y="124" width="40" height="40" rx="10" fill="#D9B978"/>
+    <rect x="180" y="180" width="40" height="40" rx="10" fill="#F6EBD8"/>
+    <rect x="236" y="180" width="40" height="40" rx="10" fill="#D9B978"/>
+    <rect x="292" y="180" width="40" height="40" rx="10" fill="#F6EBD8"/>
+  </g>
+</svg>

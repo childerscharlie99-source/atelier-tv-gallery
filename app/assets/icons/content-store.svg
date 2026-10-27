@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="LG Content Store">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#170A0E"/>
+      <stop offset=".55" stop-color="#2C1019"/>
+      <stop offset="1" stop-color="#521C30"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#FFE7EE" stop-opacity=".14"/>
+      <stop offset=".58" stop-color="#FFE7EE" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".44"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#FFE9F0" stroke-opacity=".08"/>
+  <rect x="184" y="120" width="144" height="98" rx="12" fill="#000" opacity=".34" transform="translate(0 8)"/>
+  <rect x="184" y="120" width="144" height="98" rx="12" fill="none" stroke="#F4E4CB" stroke-width="9"/>
+  <path d="M216 121 C216 92 235 76 256 76 C277 76 296 92 296 121" fill="none" stroke="#F4E4CB" stroke-width="9" stroke-linecap="round"/>
+</svg>

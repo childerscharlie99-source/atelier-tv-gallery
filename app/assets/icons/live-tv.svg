@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="Live TV">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#0B0C0D"/>
+      <stop offset=".55" stop-color="#15181B"/>
+      <stop offset="1" stop-color="#262B30"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#F6EBD8" stop-opacity=".14"/>
+      <stop offset=".58" stop-color="#F6EBD8" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#FFF4E2" stroke-opacity=".08"/>
+  <g fill="none" stroke="#F6EBD8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M214 76 L256 112 L298 76"/>
+  </g>
+  <rect x="170" y="112" width="172" height="106" rx="16" fill="#000" opacity=".35" transform="translate(0 8)"/>
+  <rect x="170" y="112" width="172" height="106" rx="16" fill="#101214" stroke="#F6EBD8" stroke-width="9"/>
+  <g fill="none" stroke="#F6EBD8" stroke-width="7" stroke-linecap="round">
+    <path d="M237 162 A27 27 0 0 1 275 162"/>
+    <path d="M224 147 A45 45 0 0 1 288 147"/>
+  </g>
+  <circle cx="256" cy="176" r="6" fill="#F6EBD8"/>
+</svg>

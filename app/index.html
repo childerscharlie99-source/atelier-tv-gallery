@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' file:; img-src 'self' file: data:; font-src 'self' file:; style-src 'self' file:; script-src 'self' file:; connect-src 'self' file:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Atelier</title>
+  <link rel="stylesheet" href="css/atelier.css">
+  <link rel="stylesheet" href="css/frames.css">
+</head>
+<body>
+  <main id="stage">
+    <div class="art-frame" id="art-frame" aria-hidden="true">
+      <img id="plate" class="plate is-front" alt="" draggable="false">
+      <img id="plate-b" class="plate" alt="" draggable="false">
+    </div>
+    <div class="picture-frame is-stage" id="picture-frame" aria-hidden="true"></div>
+    <div class="scrim" aria-hidden="true"></div>
+
+    <header class="chrome top" id="top">
+      <div class="brand" aria-label="Atelier">
+        <span class="brand-name">ATELIER</span>
+        <span class="brand-rule" aria-hidden="true"></span>
+      </div>
+      <div class="clock" aria-label="Clock">
+        <time class="clock-time" id="clock-time">—</time>
+        <div class="clock-date" id="clock-date"></div>
+      </div>
+    </header>
+
+    <section class="chrome hero" id="hero" aria-label="Artwork">
+      <div class="eyebrow">
+        <span>From the collection</span>
+        <span aria-hidden="true">·</span>
+        <span id="ordinal">I / XXX</span>
+      </div>
+      <h1 class="hero-title" id="art-title"></h1>
+      <div class="byline">
+        <span id="art-artist"></span>
+        <span class="byline-dot" aria-hidden="true">·</span>
+        <span id="art-year"></span>
+      </div>
+      <div class="hero-hint">← → wander the collection&nbsp;&nbsp;·&nbsp;&nbsp;↓ apps</div>
+    </section>
+
+    <section class="plaque" id="plaque" aria-label="Artwork details">
+      <div class="plaque-kicker">Atelier · Collection</div>
+      <div class="plaque-title" id="plaque-title"></div>
+      <div class="plaque-meta">
+        <span id="plaque-artist"></span>
+        <span class="plaque-dot" aria-hidden="true">·</span>
+        <span id="plaque-year"></span>
+      </div>
+    </section>
+
+    <div class="chrome dock-wrap" id="dock-wrap">
+      <nav class="dock" id="dock" aria-label="Apps"></nav>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <section class="overlay" id="inputs-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Inputs">
+      <div class="panel">
+        <div class="panel-kicker">Atelier · Sources</div>
+        <h2 class="panel-title">Choose an input</h2>
+        <p class="panel-sub">Live television, or a device waiting on the other side of the glass.</p>
+        <div class="rows" id="inputs-rows"></div>
+        <div class="panel-foot">Back to close</div>
+      </div>
+    </section>
+
+    <section class="overlay" id="allapps-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="All apps">
+      <div class="panel apps-panel">
+        <div class="panel-kicker">Atelier · Library</div>
+        <h2 class="panel-title">All Apps</h2>
+        <p class="panel-sub">Everything from the TV, in one quiet library.</p>
+        <div class="apps-grid" id="apps-grid"></div>
+        <div class="panel-foot">Arrows to move&nbsp;&nbsp;·&nbsp;&nbsp;OK to open&nbsp;&nbsp;·&nbsp;&nbsp;Back to close</div>
+      </div>
+    </section>
+
+    <section class="overlay" id="display-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Atelier Settings">
+      <div class="panel display-panel">
+        <div class="panel-kicker">Atelier · Settings</div>
+        <h2 class="panel-title">Atelier Settings</h2>
+        <p class="panel-sub">Art display, picture-frame finish, and stock-Home request controls. Idle always returns to a clean plate. This is not the LG Settings app.</p>
+        <div class="display-layout">
+          <div class="display-col">
+            <div class="panel-section">
+              <div class="panel-section-title">Art Display</div>
+              <div class="rows" id="display-rows" role="listbox" aria-label="Art display mode">
+                <button class="row display-option" id="display-full" type="button" role="option">
+                  <span class="row-label">Full Screen</span>
+                  <span class="row-detail">Art fills the screen</span>
+                </button>
+                <button class="row display-option" id="display-framed" type="button" role="option">
+                  <span class="row-label">Framed</span>
+                  <span class="row-detail">Full-screen art in a frame</span>
+                </button>
+              </div>
+            </div>
+            <div class="panel-section">
+              <div class="panel-section-title">LG Home</div>
+              <div class="rows">
+                <button class="row restore-row" id="display-restore" type="button">
+                  <span class="row-label">Restore Stock LG TV</span>
+                  <span class="row-detail">Request LG Home</span>
+                </button>
+              </div>
+              <p class="restore-note">Atelier is a normal app, not a Home replacement. This requests the stock LG Home. Atelier stays installed and may remain running in the background. It does not uninstall apps, reset the TV, or change Developer Mode.</p>
+              <div class="restore-confirm" id="restore-confirm" hidden aria-busy="false">
+                <div class="restore-confirm-title">Request stock LG Home?</div>
+                <p class="restore-confirm-copy" id="restore-confirm-copy" aria-live="polite">No Atelier service, boot hook, HOME-key watcher, or foreground guard is installed. No apps were disabled by Atelier. Press OK to request stock LG Home. Back cancels.</p>
+                <div class="restore-log" id="restore-log" aria-live="polite" hidden></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-section display-frame-section">
+            <div class="panel-section-title">Picture Frame</div>
+            <p class="frame-note">The white bezel Samsung shows on The Frame TV. Choosing it applies immediately and is remembered.</p>
+            <div class="frame-grid" id="frame-grid" role="listbox" aria-label="Picture frame style"></div>
+          </div>
+        </div>
+        <div class="panel-foot">Arrows to move&nbsp;&nbsp;·&nbsp;&nbsp;OK selects&nbsp;&nbsp;·&nbsp;&nbsp;Back to close</div>
+      </div>
+    </section>
+
+    <section class="overlay" id="diagnostics" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Verification card">
+      <div class="panel">
+        <div class="panel-kicker">Atelier · Verification</div>
+        <h2 class="panel-title">Surface report</h2>
+        <p class="panel-sub">This card is local to the television. Nothing is uploaded.</p>
+        <div class="diag-grid" id="diag-grid"></div>
+        <div class="panel-foot">Back to close</div>
+      </div>
+    </section>
+
+    <div class="cover" id="cover" aria-hidden="true">
+      <div class="cover-mark">ATELIER</div>
+    </div>
+  </main>
+
+  <script src="vendor/webOSTV.js" charset="utf-8"></script>
+  <script src="js/config.js"></script>
+  <script src="js/atelier.js"></script>
+</body>
+</html>

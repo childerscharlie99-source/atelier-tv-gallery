@@ -1,0 +1,166 @@
+{
+    "note":  "Official App Store artwork used only to identify each installed service on the TV. The PNG files are third-party trademarks and are not distributed with this repository; run tools/fetch-icons.js to download them into app/assets/icons/ios/ before packaging.",
+    "source":  "Apple iTunes Search API artwork, US storefront",
+    "icons":  [
+                  {
+                      "name":  "Netflix",
+                      "seller":  "Netflix, Inc.",
+                      "trackId":  363590051,
+                      "bundleId":  "com.netflix.Netflix",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/ac/4e/17ac4efb-a0a4-e618-c58b-79a2fa4b544d/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/netflix.png",
+                      "bytes":  1054493,
+                      "sha256":  "5ab4c1feda32df919a2e4472f379a4cd130076b17706288a11f8a672bdc44a7e"
+                  },
+                  {
+                      "name":  "Amazon Prime Video",
+                      "seller":  "AMZN Mobile LLC",
+                      "trackId":  545519333,
+                      "bundleId":  "com.amazon.aiv.AIVApp",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/f0/ac/2bf0acc8-5fc6-44bf-13b6-9f85937ed415/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/prime-video.png",
+                      "bytes":  43705,
+                      "sha256":  "8eccd6428d60054439f513cc38937a9c1a193941064f3aaf00d8dc997a1bfe1f"
+                  },
+                  {
+                      "name":  "HBO Max: Stream Movies \u0026 TV",
+                      "seller":  "WarnerMedia Global Digital Services, LLC",
+                      "trackId":  1666653815,
+                      "bundleId":  "com.wbd.stream",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/88/b3/cb/88b3cb65-9dd7-8801-bb47-affd72805a82/AppIcon-0-0-1x_U007epad-0-1-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/hbo.png",
+                      "bytes":  1062598,
+                      "sha256":  "6eb42037aacdec124dc2f35c2bce3c8e9bd7d82c03a90ae4c08f4ff988e5e164"
+                  },
+                  {
+                      "name":  "Peacock TV: Stream TV \u0026 Movies",
+                      "seller":  "Peacock TV LLC",
+                      "trackId":  1508186374,
+                      "bundleId":  "com.peacocktv.peacock",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/64/a7/5d64a7ef-77f7-26b3-2b53-14e81a12783e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/peacock.png",
+                      "bytes":  652259,
+                      "sha256":  "78de3fd381626caafad1ad5b8452565a9a6e3d01903dd61deb7a9cad93730a25"
+                  },
+                  {
+                      "name":  "Paramount+",
+                      "seller":  "CBS Mobile",
+                      "trackId":  530168168,
+                      "bundleId":  "com.cbsvideo.app",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3f/8b/f6/3f8bf654-12ad-3d7f-239f-de856b2050cb/P_U002bAppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/paramount-plus.png",
+                      "bytes":  50324,
+                      "sha256":  "47b1aa3ec20c04fea2dc35e4e028a489ac51ab1b823270d7d71f4e2046607c88"
+                  },
+                  {
+                      "name":  "Hulu: Stream TV shows \u0026 movies",
+                      "seller":  "Hulu, LLC",
+                      "trackId":  376510438,
+                      "bundleId":  "com.hulu.plus",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/fa/27/d8fa27eb-7f32-fe16-8853-992a057248ce/HuluAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/hulu.png",
+                      "bytes":  785219,
+                      "sha256":  "09ea2db5aa5022087977e0b1ae1a0f1b6a70d6666858b66133ce102a6dcfa0ce"
+                  },
+                  {
+                      "name":  "Apple TV",
+                      "seller":  "Apple Inc.",
+                      "trackId":  1174078549,
+                      "bundleId":  "com.apple.tv",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/74/61/a274610a-1537-0429-df1b-afacfad5a478/tvCalistoga-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/apple-tv.png",
+                      "bytes":  1105179,
+                      "sha256":  "4283ef5f81e5984f3dceacd7f5d76367436f38ddd4defacdbb99bb6022c9dd10"
+                  },
+                  {
+                      "name":  "YouTube",
+                      "seller":  "Google LLC",
+                      "trackId":  544007664,
+                      "bundleId":  "com.google.ios.youtube",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/11/1f/1e/111f1e29-ab13-355b-4ed2-b1b97abc2200/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/youtube.png",
+                      "bytes":  30665,
+                      "sha256":  "575cd8d2f5c567a3f3d65acb36cad74acd75cbc111cbe0804960a56b917f53ea"
+                  },
+                  {
+                      "name":  "Plex: Find Movies and TV Shows",
+                      "seller":  "Plex Inc.",
+                      "trackId":  383457673,
+                      "bundleId":  "com.plexapp.plex",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a4/38/db/a438db28-fd3b-4e8a-f24c-c6f97e17fc59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/plex.png",
+                      "bytes":  33525,
+                      "sha256":  "38db21a52ac4af854a550b2ac3440854fd2cb7c1f33c488dcc66f126c3751489"
+                  },
+                  {
+                      "name":  "Disney+",
+                      "seller":  "Disney Electronic Content, Inc.",
+                      "trackId":  1446075923,
+                      "bundleId":  "com.disney.disneyplus",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e8/d6/4a/e8d64aa6-5c37-5335-c178-0d327afadd45/AppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/disney-plus.png",
+                      "bytes":  1044911,
+                      "sha256":  "10e7a5b711e460519bb5dfa24a61ba9d4f38411b09ea1cb7432455fdd4d25315"
+                  },
+                  {
+                      "name":  "Apple Music",
+                      "seller":  "Apple Inc.",
+                      "trackId":  1108187390,
+                      "bundleId":  "com.apple.Music",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c2/74/89/c27489c2-2c63-2e32-efee-b0f59b3184ef/musicCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/apple-music.png",
+                      "bytes":  1036463,
+                      "sha256":  "bf6e8cf061bc51372f81dcad1faa989785276a74bbc961b20e48169665b56514"
+                  },
+                  {
+                      "name":  "Spotify: Music and Podcasts",
+                      "seller":  "Spotify",
+                      "trackId":  324684580,
+                      "bundleId":  "com.spotify.client",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/f2/6a/8bf26ab9-3ced-cb5c-a2b3-19f65e7f5cc6/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/spotify.png",
+                      "bytes":  787578,
+                      "sha256":  "32bc19838412e083b1c8f35f0f96aa8fe4cf44d016fafc4a22a124bb470f048d"
+                  },
+                  {
+                      "name":  "TikTok - Videos, Shop \u0026 LIVE",
+                      "seller":  "TIKTOK PTE. LTD.",
+                      "trackId":  835599320,
+                      "bundleId":  "com.zhiliaoapp.musically",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/33/74/99337468-d03a-5efc-d436-67c0f4d918e1/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/tiktok.png",
+                      "bytes":  731089,
+                      "sha256":  "b34ea1c9ed53ab5537dec42e499e6e1fd31191656181e43b3bbd0b3231f1cd01"
+                  },
+                  {
+                      "name":  "Tubi: Movies \u0026 Live TV",
+                      "seller":  "Tubi, Inc",
+                      "trackId":  886445756,
+                      "bundleId":  "com.adrise.tubitv",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/10/da/6610da68-7e2f-c83f-1024-c9a647b78927/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/tubi.png",
+                      "bytes":  748841,
+                      "sha256":  "8fb8134602db2e5a7d9ec42a7238ae35ba3b6a4650e737b5edc24b102886327b"
+                  },
+                  {
+                      "name":  "Fubo: Watch Live TV \u0026 Sports",
+                      "seller":  "fuboTV Inc.",
+                      "trackId":  905401434,
+                      "bundleId":  "tv.fubo.mobile",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ae/d9/9b/aed99b97-67eb-6a1f-1464-7899dd0fe29d/Fubo-0-0-1x_U007epad-0-1-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/fubotv.png",
+                      "bytes":  882466,
+                      "sha256":  "0fde650fc69050968ffdd8c50bb930a48fcbe8d01bcb90ac4817e7094d24baa0"
+                  },
+                  {
+                      "name":  "Fandango - Movies \u0026 Series",
+                      "seller":  "VUDU, Inc.",
+                      "trackId":  487285735,
+                      "bundleId":  "com.vudu.VuduIosClient",
+                      "url":  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/cb/ad/c0cbad57-92ee-601e-ba0e-6793b8440b94/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/1024x1024bb.png",
+                      "file":  "assets/icons/ios/vudu.png",
+                      "bytes":  348104,
+                      "sha256":  "1894130d42a8948deccb3c622ef58e7c3fe375ab1166fbe0411fd904e41f9d0c"
+                  }
+              ]
+}

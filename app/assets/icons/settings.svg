@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="Settings">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#12100C"/>
+      <stop offset=".55" stop-color="#26221A"/>
+      <stop offset="1" stop-color="#4A4231"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#FFF2D8" stop-opacity=".15"/>
+      <stop offset=".58" stop-color="#FFF2D8" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#FFF4E2" stroke-opacity=".08"/>
+  <g stroke="#000" stroke-opacity=".3" stroke-width="9" stroke-linecap="round" transform="translate(0 7)">
+    <path d="M148 104 H364"/>
+    <path d="M148 144 H364"/>
+    <path d="M148 184 H364"/>
+  </g>
+  <g stroke="#F5EAD7" stroke-width="9" stroke-linecap="round">
+    <path d="M148 104 H364"/>
+    <path d="M148 144 H364"/>
+    <path d="M148 184 H364"/>
+  </g>
+  <g fill="#F5EAD7">
+    <circle cx="306" cy="104" r="16"/>
+    <circle cx="212" cy="144" r="16"/>
+    <circle cx="330" cy="184" r="16"/>
+  </g>
+  <g fill="#26221A">
+    <circle cx="306" cy="104" r="6"/>
+    <circle cx="212" cy="144" r="6"/>
+    <circle cx="330" cy="184" r="6"/>
+  </g>
+</svg>

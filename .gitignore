@@ -1,0 +1,25 @@
+# Build output and local device credentials
+dist/
+*.ipk
+*.log
+.ares/
+*.pem
+*.key
+
+# Third-party App Store artwork: fetched locally by tools/fetch-icons.js,
+# never committed.
+app/assets/icons/ios/*.png
+
+# Source material and working files not part of the app
+art_source/
+art_plates/
+evidence/
+screenshots/
+__pycache__/
+*.pyc
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

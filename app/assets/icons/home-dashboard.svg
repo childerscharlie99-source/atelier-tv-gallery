@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="Home Dashboard">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#0B0D10"/>
+      <stop offset=".55" stop-color="#161B21"/>
+      <stop offset="1" stop-color="#2A333C"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#EAF3FA" stop-opacity=".14"/>
+      <stop offset=".58" stop-color="#EAF3FA" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#EAF3FA" stroke-opacity=".08"/>
+  <path d="M176 146 L256 92 L336 146 V206 H176 Z" fill="#000" opacity=".3" transform="translate(0 7)"/>
+  <path d="M176 146 L256 92 L336 146 V206 H176 Z" fill="none" stroke="#EFE4CF" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M232 206 V168 H280 V206" fill="none" stroke="#E8C98E" stroke-width="9" stroke-linejoin="round"/>
+  <circle cx="256" cy="128" r="6" fill="#E8C98E"/>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="Atelier Display">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#0C0D0C"/>
+      <stop offset=".55" stop-color="#1B1D1A"/>
+      <stop offset="1" stop-color="#31362D"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#F8ECD4" stop-opacity=".15"/>
+      <stop offset=".58" stop-color="#F8ECD4" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="art">
+      <rect x="180" y="82" width="152" height="104" rx="4"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#FFF4E2" stroke-opacity=".08"/>
+  <rect x="166" y="66" width="180" height="136" rx="12" fill="#000" opacity=".32" transform="translate(0 8)"/>
+  <rect x="166" y="66" width="180" height="136" rx="12" fill="#101210"/>
+  <rect x="166" y="66" width="180" height="136" rx="12" fill="none" stroke="#EAD9B8" stroke-width="9"/>
+  <g clip-path="url(#art)">
+    <rect x="180" y="82" width="152" height="104" fill="#2A3330"/>
+    <circle cx="216" cy="108" r="14" fill="#EFC97D"/>
+    <path d="M180 178 L226 128 L252 156 L282 118 L332 178 Z" fill="#6F806F"/>
+    <path d="M180 182 L232 150 L270 178 L304 148 L332 182 Z" fill="#4C5A4C"/>
+  </g>
+  <g transform="translate(352 210)">
+    <circle r="39" fill="#12110D" stroke="#EAD9B8" stroke-opacity=".28" stroke-width="3"/>
+    <g fill="#EAD9B8">
+      <rect x="-4" y="-35" width="8" height="11" rx="3"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(45)"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(90)"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(135)"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(180)"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(225)"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(270)"/>
+      <rect x="-4" y="-35" width="8" height="11" rx="3" transform="rotate(315)"/>
+    </g>
+    <circle r="21" fill="none" stroke="#EAD9B8" stroke-width="7"/>
+    <circle r="7" fill="#EAD9B8"/>
+  </g>
+</svg>

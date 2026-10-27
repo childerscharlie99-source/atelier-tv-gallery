@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="288" viewBox="0 0 512 288" role="img" aria-label="Game Optimizer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#090D0B"/>
+      <stop offset=".55" stop-color="#141D18"/>
+      <stop offset="1" stop-color="#2A3A30"/>
+    </linearGradient>
+    <radialGradient id="lift" cx=".28" cy=".06" r=".92">
+      <stop offset="0" stop-color="#EAF6EC" stop-opacity=".14"/>
+      <stop offset=".58" stop-color="#EAF6EC" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="depth" cx=".5" cy="1.12" r=".86">
+      <stop offset="0" stop-color="#000" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="288" rx="46" fill="url(#bg)"/>
+  <rect width="512" height="288" rx="46" fill="url(#lift)"/>
+  <rect width="512" height="288" rx="46" fill="url(#depth)"/>
+  <rect x="1" y="1" width="510" height="286" rx="45" fill="none" stroke="#EAF6EC" stroke-opacity=".08"/>
+  <path d="M176 126 C178 108 196 100 214 104 H298 C316 100 334 108 336 126 L344 174 C348 196 324 208 310 190 L292 168 H220 L202 190 C188 208 164 196 168 174 Z" fill="#000" opacity=".32" transform="translate(0 7)"/>
+  <path d="M176 126 C178 108 196 100 214 104 H298 C316 100 334 108 336 126 L344 174 C348 196 324 208 310 190 L292 168 H220 L202 190 C188 208 164 196 168 174 Z" fill="none" stroke="#EFE4CF" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M204 146 H230 M217 133 V159" stroke="#EFE4CF" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="300" cy="140" r="8" fill="#E8C98E"/>
+  <circle cx="317" cy="156" r="8" fill="#E8C98E"/>
+</svg>

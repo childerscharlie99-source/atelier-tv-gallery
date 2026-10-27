@@ -1,0 +1,246 @@
+/*
+ * Atelier picture frames.
+ *
+ * Framed mode is still a full-screen 16:9 plate. This overlay sits on top of
+ * the outermost edge of that plate as one continuous moulded band: a single
+ * border with no per-edge rails or corner pieces, so the finish runs seamless
+ * around all four corners. A mouth element casts the band's shadow into the
+ * artwork. Nothing here scales, crops, or repositions the bitmap.
+ *
+ * The finish is painted with CSS, so it stays sharp at 4K without shipping a
+ * frame image. The same component is reused at a reduced --pf-scale for the
+ * Display preview.
+ */
+
+.picture-frame {
+  --pf-scale: 1;
+  --pf-w: calc(var(--fw, 48px) * var(--pf-scale));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  box-sizing: border-box;
+  border: var(--pf-w) solid var(--pf-band, #ece8df);
+  border-radius: 8px;
+  /* One fine line just inside the room-facing edge defines the band against
+     the artwork's dark surround without breaking the seamless corners. */
+  outline: 1px solid var(--pf-rim, rgba(86, 81, 73, 0.42));
+  outline-offset: -1px;
+  pointer-events: none;
+}
+
+/* Framed mode sets the plate into the frame opening: the art-frame is inset
+   by the band and the plate covers that opening exactly, so the painting
+   reaches the band on every side with no white mount showing through. Because
+   the band removes a uniform 72 px from a 16:9 screen, the opening is slightly
+   wider than 16:9; cover fills it and trims a few percent off the top and
+   bottom edges rather than leaving white side bars. Full Screen mode keeps
+   its original full-bleed cover. */
+body.mode-framed .art-frame {
+  top: var(--fw, 40px);
+  right: var(--fw, 40px);
+  bottom: var(--fw, 40px);
+  left: var(--fw, 40px);
+  background: var(--pf-band, #ece8df);
+}
+body.mode-framed .plate {
+  object-fit: cover;
+}
+body.mode-framed .picture-frame.is-stage {
+  display: block;
+}
+.picture-frame.is-preview {
+  display: block;
+}
+
+/* The recess. Sits in the padding box, so its edges line the band's inner
+   edge exactly. This element covers the artwork, so its inset shadow darkens
+   the plate only along the frame's mouth, never across the picture. */
+.pf-mouth {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 249, 236, 0.20),
+    inset 0 0 0 2px rgba(0, 0, 0, 0.46),
+    inset 0 0 calc(var(--pf-w) * 0.07 + 1px) rgba(0, 0, 0, 0.50),
+    inset 0 0 calc(var(--pf-w) * 0.45) rgba(0, 0, 0, 0.36),
+    inset 0 0 calc(var(--pf-w) * 1.25) rgba(0, 0, 0, 0.20);
+}
+
+/* Chrome clears the frame rather than sitting on it. */
+body.mode-framed .top {
+  padding: calc(40px + var(--fw, 48px)) calc(54px + var(--fw, 48px)) 0;
+}
+body.mode-framed .dock-wrap {
+  bottom: calc(24px + var(--fw, 48px));
+}
+body.mode-framed .plaque {
+  bottom: calc(206px + var(--fw, 48px));
+}
+body.mode-framed .toast {
+  bottom: calc(322px + var(--fw, 48px));
+}
+
+/* ------------------------------------------------------------------ */
+/* Material                                                           */
+/* ------------------------------------------------------------------ */
+
+/* Modern White — the white bezel Samsung shows on The Frame TV. The TV's
+ * own dark surround stays behind it, so the bezel is modelled as a slim,
+ * satin, softly warm off-white band over the outermost edge of the picture.
+ * It is painted as a single border, so the finish is continuous around the
+ * corners: no mitre lines, triangles, or rail-to-rail joins. A fine rim at
+ * the room-facing edge and the mouth shadow give it depth. */
+.frame-modern-white {
+  --fw: 72px;
+  --pf-band: #ede9e1;
+  --pf-rim: rgba(86, 81, 73, 0.42);
+}
+
+.picture-frame.is-preview.frame-modern-white {
+  --pf-scale: 0.34;
+}
+
+/* ------------------------------------------------------------------ */
+/* Display panel                                                      */
+/* ------------------------------------------------------------------ */
+
+.display-panel {
+  width: min(1420px, 93vw);
+}
+
+.display-layout {
+  display: grid;
+  grid-template-columns: minmax(380px, 0.72fr) minmax(620px, 1.28fr);
+  gap: 32px;
+  align-items: start;
+}
+.display-layout .panel-section {
+  margin-top: 23px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(199, 167, 106, 0.18);
+}
+.display-col > .panel-section:first-child {
+  margin-top: 23px;
+}
+.frame-note {
+  max-width: 620px;
+  margin: 0 0 13px;
+  color: var(--parchment-faint);
+  font-size: 12.5px;
+  font-style: italic;
+  line-height: 1.45;
+}
+.frame-grid {
+  display: grid;
+  /* One finish: a single large preview, not a four-tile row. */
+  grid-template-columns: minmax(0, 560px);
+  gap: 13px 14px;
+}
+.frame-choice {
+  display: flex;
+  flex-direction: column;
+  /* webOS Chromium 79 gives buttons a flex-start default; stretch is what
+     makes every tile the same width as its grid cell. */
+  align-items: stretch;
+  padding: 7px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.24s var(--ease), background 0.24s var(--ease),
+    border-color 0.24s var(--ease), box-shadow 0.24s var(--ease);
+}
+.frame-choice.is-focused {
+  transform: translateY(-3px);
+  border-color: rgba(255, 244, 222, 0.26);
+  background:
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.025) 100%),
+    rgba(199, 167, 106, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.20),
+    0 14px 30px rgba(0, 0, 0, 0.30);
+}
+.frame-choice.is-selected {
+  border-color: rgba(228, 201, 143, 0.44);
+}
+.frame-choice.is-selected.is-focused {
+  border-color: rgba(228, 201, 143, 0.82);
+}
+.frame-preview {
+  --pf-scale: 0.34;
+  --pf-w: calc(var(--fw, 40px) * var(--pf-scale));
+  position: relative;
+  width: auto;
+  align-self: stretch;
+  height: 0;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 9px;
+  background: var(--pf-band, #ece8df);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.36);
+}
+/* The preview shows the same fit as the stage: the painting fills the frame
+   opening edge to edge, so no white mount shows inside the band. */
+.frame-preview-art {
+  position: absolute;
+  top: var(--pf-w);
+  left: var(--pf-w);
+  width: calc(100% - 2 * var(--pf-w));
+  height: calc(100% - 2 * var(--pf-w));
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+.frame-choice-meta {
+  display: block;
+  padding: 7px 3px 2px;
+}
+.frame-choice-name {
+  display: block;
+  color: rgba(243, 233, 214, 0.80);
+  font-size: 14.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.frame-choice.is-selected .frame-choice-name {
+  color: var(--gold-bright);
+}
+.frame-choice.is-selected .frame-choice-name::after {
+  content: " · Current";
+  color: var(--gold);
+  font-size: 10.5px;
+  font-style: italic;
+  letter-spacing: 0;
+}
+.frame-choice-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--parchment-faint);
+  font-size: 10px;
+  font-style: italic;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame-choice {
+    transition-duration: 0.01ms !important;
+  }
+}
